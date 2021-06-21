@@ -24,5 +24,6 @@ Este proyecto cuenta con las siguientes dependencias de React:
 - ESlint
 - Prettier
 - Postcss
+
 ###Development server
 Se debe ejecutar yarn install para instalar las dependencias necesarias para correr la aplicación localmente. Se debe levantar localmente con yarn start y se puede ver el comportamiento en la página de http://localhost:3000 , en caso que este puerto está ocupado se debe correr y para usar por ejemplo el puerto 3001.
