@@ -1,0 +1,82 @@
+.button {
+  height: 38px;
+  padding: 0 48px;
+  position: relative;
+  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+}
+
+.btn-contained-primary {
+  background-color: var(--primary);
+  color: var(--white);
+}
+
+.btn-contained-primary {
+  background-color: var(--primary);
+  color: var(--white);
+  transition: all 0.4s;
+}
+
+.btn-contained-primary:hover {
+  background-color: var(--alternative-08);
+  outline: none;
+  transition: all 0.4s;
+}
+
+.btn-outlined-primary {
+  background-color: transparent;
+  border: 2px solid var(--primary);
+  color: var(--white);
+}
+
+.btn-outlined-primary {
+  border: 2px solid var(--primary);
+  color: var(--primary);
+}
+
+.btn-outlined-primary:hover {
+  border: 2px solid var(--primary);
+  color: var(--primary);
+  transition: all 0.4s;
+}
+
+.btn-contained-secondary {
+  background-color: var(--alternative-02);
+}
+
+.btn-contained-secondary {
+  background-color: var(--alternative);
+  color: var(--white);
+  transition: all 0.4s;
+}
+
+.btn-contained-secondary:hover {
+  background-color: var(--alternative-08);
+  color: var(--white);
+  outline: none;
+  transition: all 0.4s;
+}
+
+.btn-large {
+  height: 52px !important;
+}
+
+.btn-medium {
+  height: 48px !important;
+}
+
+.btn-small {
+  height: 34px !important;
+}
+
+.rounded-full{
+  background: var(--primary);
+  border-radius: 50%;
+  padding: 0px !important;
+  height: 50px;
+  width: 50px;
+  color: var(--white);
+}
