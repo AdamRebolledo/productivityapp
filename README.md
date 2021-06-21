@@ -9,7 +9,7 @@ Proyecto creado para la entrega del proyecto final de un diplomado en React a re
 Para trabajar en forma local, se requiere la instalación de los siguientes plugins:
 - Prettier
 - ESlint
-- 
+
 ###Dependencias
 Este proyecto cuenta con las siguientes dependencias de React:
 - Craco
