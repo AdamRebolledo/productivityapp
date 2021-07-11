@@ -38,7 +38,7 @@ module.exports = {
       'green-04': 'rgba(66, 199, 152, 0.4)',
       'watermelon-04': 'rgba(240, 70, 97, 0.4)',
       'gradient-primary': 'var(--gradient-primary)',
-      'gradient-secondary': 'var(--gradient- secondary)',
+      'gradient-secondary': 'var(--gradient-secondary)',
     },
   },
   variants: {
