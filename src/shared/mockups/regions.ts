@@ -1,0 +1,18 @@
+export const regions: any = [
+  { id: 1, name: 'REGION DE ARICA Y PARINACOTA' },
+  { id: 2, name: 'REGION DE TARAPACA' },
+  { id: 3, name: 'REGION DE ANTOFAGASTA' },
+  { id: 4, name: 'REGION DE ATACAMA' },
+  { id: 5, name: 'REGION DE COQUIMBO' },
+  { id: 6, name: 'REGION DE VALPARAISO' },
+  { id: 7, name: 'REGION METROPOLITANA' },
+  { id: 8, name: 'REGION DEL LIBERTADOR GENERAL BERNARDO OHIGGINS' },
+  { id: 9, name: 'REGION DEL MAULE' },
+  { id: 10, name: 'REGION DEL BIO-BIO' },
+  { id: 11, name: 'REGION DE LA ARAUCANIA' },
+  { id: 12, name: 'REGION DE LOS RIOS' },
+  { id: 13, name: 'REGION DE LOS LAGOS' },
+  { id: 14, name: 'REGION DE AYSEN DEL GENERAL CARLOS IBAÑEZ DEL CAMPO' },
+  { id: 15, name: 'REGION DE MAGALLANES Y LA ANTARTICA CHILENA' },
+  { id: 16, name: 'REGION DE ÑUBLE' },
+]

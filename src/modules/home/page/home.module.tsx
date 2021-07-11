@@ -1,5 +1,11 @@
+import ListComponent from '../components/list.component'
+
 const Home = () => {
-  return <div className='text-primary'>HOME</div>
+  return (
+    <div>
+      <ListComponent />
+    </div>
+  )
 }
 
 export default Home
