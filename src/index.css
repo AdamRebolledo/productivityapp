@@ -61,7 +61,7 @@
 
 @font-face {
   font-family: 'poppins-italic-thin';
-  src: local('poppins-italic-thin'),url('../src/assets/fonts/Poppins/Poppins-ThinItalic.ttf') format('truetype');
+  src: local('poppins-italic-thin'), url('../src/assets/fonts/Poppins/Poppins-ThinItalic.ttf') format('truetype');
 }
 
 @font-face {
@@ -149,4 +149,18 @@ h4 {
 
 .paragraph-regular {
   font-family: 'poppins-regular' !important;
+}
+
+.input {
+  transition: border 0.2s ease-in-out;
+  min-width: 280px;
+}
+
+.input:focus + .label,
+.input:active + .label,
+.input.filled + .label {
+  font-size: 0.75rem;
+  transition: all 0.2s ease-out;
+  top: -0.1rem;
+  color: #667eea;
 }
