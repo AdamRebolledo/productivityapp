@@ -8,12 +8,48 @@ class APIClient {
     this.endpoints = endpoints
     this.mode = props.SERVER
   }
+  getRegions() {
+    return fetch(`${process.env.REACT_APP_BACKEND_SERVER_URL!}${this.endpoints.listRegions}`)
+      .then((res) => {
+        return res.text()
+      })
+      .then((res) => {
+        return res
+      })
+  }
 
+  getCommunesbyRegion() {
+    return fetch(`${process.env.REACT_APP_BACKEND_SERVER_URL!}${this.endpoints.listCommunesByRegion}`)
+      .then((res) => {
+        return res.text()
+      })
+      .then((res) => {
+        return res
+      })
+  }
+  get() {
+    fetch(`${process.env.REACT_APP_BACKEND_SERVER_URL!}${this.endpoints.listCommunesByRegion}`, {
+      method: 'POST', // or 'PUT'
+      body: JSON.stringify({ reg_id: 7 }), // data can be `string` or {object}!
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    }).then((res) => console.log(res))
+  }
+
+  getRegion() {
+    return fetch(`${process.env.REACT_APP_BACKEND_SERVER_URL!}${this.endpoints.listRegions}`)
+      .then((res) => {
+        return res.text()
+      })
+      .then((res) => {
+        return res
+      })
+  }
   getLocales() {
     return fetch(`${process.env.REACT_APP_BACKEND_SERVER_URL!}${this.endpoints.list}`).then((res) => res.json())
   }
   getLocalesByRegion(id: string) {
-    console.log(`${process.env.REACT_APP_BACKEND_SERVER_URL!}${this.endpoints.listByRegions}${id}`)
     return fetch(`${process.env.REACT_APP_BACKEND_SERVER_URL!}${this.endpoints.listByRegions}${id}`).then((res) => res.json())
   }
 }

@@ -1,20 +1,17 @@
 import { TSelect } from '../../utils/ChileanRegions'
+import ReactHtmlParser, { processNodes, convertNodeToElement } from 'react-html-parser'
+
 type props = {
-  data: TSelect[]
+  data: any
   select?: any
 }
+
+function transform(node: any) {}
+
 const SelectComponent = ({ data, select }: props) => {
   return (
     <div>
-      <select onChange={(e: any) => select(e.target.value)}>
-        {data.map((option: TSelect, index: number) => {
-          return (
-            <option value={option.id} key={index}>
-              {option.region_name}
-            </option>
-          )
-        })}
-      </select>
+      <select onChange={(e: any) => select(e.target.value)}>{ReactHtmlParser(data, { transform })}</select>
     </div>
   )
 }
