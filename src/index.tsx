@@ -6,6 +6,7 @@ import reportWebVitals from './reportWebVitals'
 import { BrowserRouter } from 'react-router-dom'
 import { QueryClient, QueryClientProvider } from 'react-query'
 import 'react-loader-spinner/dist/loader/css/react-spinner-loader.css'
+import 'semantic-ui-css/semantic.min.css'
 
 const queryClient = new QueryClient()
 ReactDOM.render(

@@ -1,5 +1,5 @@
 import { TSelect } from '../../utils/ChileanRegions'
-import ReactHtmlParser, { processNodes, convertNodeToElement } from 'react-html-parser'
+import ReactHtmlParser from 'react-html-parser'
 
 type props = {
   data: any

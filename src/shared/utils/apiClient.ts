@@ -52,6 +52,27 @@ class APIClient {
   getLocalesByRegion(id: string) {
     return fetch(`${process.env.REACT_APP_BACKEND_SERVER_URL!}${this.endpoints.listByRegions}${id}`).then((res) => res.json())
   }
+
+  login(data: any) {
+    return fetch(`${process.env.REACT_APP_BACKEND_NODE_URL!}${this.endpoints.login}`, {
+      method: 'POST',
+      body: data,
+    }).then((res) => res.json())
+  }
+
+  register(data: any) {
+    return fetch(`${process.env.REACT_APP_BACKEND_NODE_URL!}${this.endpoints.register}`, {
+      method: 'POST',
+      body: data,
+    }).then((res) => res.json())
+  }
+
+  changePass(data: any) {
+    return fetch(`${process.env.REACT_APP_BACKEND_NODE_URL!}${this.endpoints.changePass}`, {
+      method: 'POST',
+      body: data,
+    }).then((res) => res.json())
+  }
 }
 function getServerUrl(mode: 'DEV' | 'PROD' | 'STAGING' | 'LOCAL') {
   switch (mode) {
