@@ -1,9 +1,9 @@
 import { useForm } from 'react-hook-form'
-import { useLoginMutate } from '../../shared/request/useAuth'
+import { useLoginMutate, useRegisterMutate } from '../../shared/request/useAuth'
 
 const Register = () => {
   const form = useForm()
-  const loginMutate = useLoginMutate()
+  const loginMutate = useRegisterMutate()
   const onSubmit = (data: { email: string; password: string }) => {
     console.log(data)
     loginMutate.mutate(data)

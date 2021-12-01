@@ -4,6 +4,6 @@ export default {
   listRegions: 'maps/index.php/utilidades/maps_obtener_regiones',
   listCommunesByRegion: 'maps/index.php/utilidades/maps_obtener_comunas_por_regiones',
   login: '',
-  register: '',
+  register: 'api/v1/users/create',
   changePass: '',
 }

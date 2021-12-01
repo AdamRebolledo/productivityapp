@@ -6,6 +6,7 @@ export function useLoginMutate() {
 }
 
 export function useRegisterMutate() {
+  console.log('ncdnslnlcd')
   return useMutation('registerMutation', apiClient.register)
 }
 

@@ -54,14 +54,16 @@ class APIClient {
   }
 
   login(data: any) {
-    return fetch(`${process.env.REACT_APP_BACKEND_NODE_URL!}${this.endpoints.login}`, {
+    return fetch(`http://localhost:5000/api/v1/users/login`, {
       method: 'POST',
-      body: data,
+      body: JSON.stringify(data),
+      mode: 'cors',
+      headers: { 'Content-Type': 'application/json' },
     }).then((res) => res.json())
   }
 
   register(data: any) {
-    return fetch(`${process.env.REACT_APP_BACKEND_NODE_URL!}${this.endpoints.register}`, {
+    return fetch(`http://localhost:5000/api/v1/users/create`, {
       method: 'POST',
       body: data,
     }).then((res) => res.json())
