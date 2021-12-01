@@ -88,6 +88,14 @@ class APIClient {
       headers: { 'Content-Type': 'application/json' },
     }).then((res) => res.json())
   }
+  savePhamacy(data: any) {
+    return fetch(`http://localhost:5000/api/v1/pharmacy/create`, {
+      method: 'POST',
+      body: JSON.stringify(data),
+      mode: 'cors',
+      headers: { 'Content-Type': 'application/json' },
+    }).then((res) => res.json())
+  }
 }
 
 function getServerUrl(mode: 'DEV' | 'PROD' | 'STAGING' | 'LOCAL') {

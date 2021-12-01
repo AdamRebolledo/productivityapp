@@ -14,6 +14,7 @@ const Login = () => {
   }
   useEffect(() => {
     if (loginMutate.isSuccess && loginMutate?.data?.message === email) {
+      localStorage.setItem('email', JSON.stringify({ email: email }))
       history.push(routes.favorite_pharmacy)
     }
   }, [loginMutate.isSuccess])

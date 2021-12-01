@@ -1,4 +1,4 @@
-import { useQuery } from 'react-query'
+import { useMutation, useQuery } from 'react-query'
 import { apiClient } from '../utils/apiClient'
 
 export function useGetRegions() {
@@ -15,4 +15,8 @@ export function useGetLocales() {
 
 export function useGetLocalesByRegions(id: string) {
   return useQuery(['useGetLocalesByRegions', id], () => apiClient.getLocalesByRegion(id))
+}
+
+export function useSavePharmacyMutate() {
+  return useMutation('savePharmacy', apiClient.savePhamacy)
 }
