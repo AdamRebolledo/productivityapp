@@ -1,15 +1,22 @@
-import { useContext } from 'react'
+import { useContext, useEffect } from 'react'
 import { useForm } from 'react-hook-form'
+import { useHistory } from 'react-router'
+import { routes } from '../../routes/routes'
 import { useLoginMutate } from '../../shared/request/useAuth'
 
 const Login = () => {
+  const history = useHistory()
   const form = useForm()
+  const email = form.watch('email')
   const loginMutate = useLoginMutate()
   const onSubmit = (data: { email: string; password: string }) => {
-    console.log(data)
     loginMutate.mutate(data)
   }
-
+  useEffect(() => {
+    if (loginMutate.isSuccess && loginMutate?.data?.message === email) {
+      history.push(routes.favorite_pharmacy)
+    }
+  }, [loginMutate.isSuccess])
   return (
     <div>
       <form onSubmit={form.handleSubmit(onSubmit)}>
@@ -36,6 +43,7 @@ const Login = () => {
         )}
         <button type='submit'>enviar</button>
       </form>
+      {loginMutate?.isSuccess && loginMutate?.data?.message !== email && loginMutate?.data?.message}
     </div>
   )
 }

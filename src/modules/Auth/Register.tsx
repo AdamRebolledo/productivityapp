@@ -5,10 +5,8 @@ const Register = () => {
   const form = useForm()
   const loginMutate = useRegisterMutate()
   const onSubmit = (data: { email: string; password: string }) => {
-    console.log(data)
     loginMutate.mutate(data)
   }
-
   return (
     <div>
       <form onSubmit={form.handleSubmit(onSubmit)}>
@@ -35,6 +33,7 @@ const Register = () => {
         )}
         <button type='submit'>enviar</button>
       </form>
+      {loginMutate?.isSuccess && loginMutate?.data?.message}
     </div>
   )
 }

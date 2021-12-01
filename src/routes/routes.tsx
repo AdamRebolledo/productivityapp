@@ -7,17 +7,23 @@ const Login = lazy(() => import('../modules/Auth/Login'))
 const Register = lazy(() => import('../modules/Auth/Register'))
 const ChangePass = lazy(() => import('../modules/Auth/ChangePass'))
 const FavoritePharmacy = lazy(() => import('../modules/FavoritePharmacy/FavoritePharmacy'))
-
+export const routes = {
+  home: '/',
+  login: '/login',
+  register: '/register',
+  change_password: '/change-password',
+  favorite_pharmacy: '/favorites',
+}
 const Routes = () => (
   <Router>
     <Suspense fallback={<div>Loading...</div>}>
       <Switch>
-        <Route exact path='/' component={Home} />
+        <Route exact path={routes.home} component={Home} />
         <Route exact path='/page-ui' component={ui_page} />
-        <Route exact path='/login' component={Login} />
-        <Route exact path='/register' component={Register} />
-        <Route exact path='/change-password' component={ChangePass} />
-        <Route exact path='/favorites' component={FavoritePharmacy} />
+        <Route exact path={routes.login} component={Login} />
+        <Route exact path={routes.register} component={Register} />
+        <Route exact path={routes.change_password} component={ChangePass} />
+        <Route exact path={routes.favorite_pharmacy} component={FavoritePharmacy} />
       </Switch>
     </Suspense>
   </Router>

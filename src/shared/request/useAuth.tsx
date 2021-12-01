@@ -13,3 +13,7 @@ export function useRegisterMutate() {
 export function useChangePassMutate() {
   return useMutation('changePassMutation', apiClient.changePass)
 }
+
+export function useChangePassConfirmMutate() {
+  return useMutation('confirmMutate', apiClient.confirmPass)
+}

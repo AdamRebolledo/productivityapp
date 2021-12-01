@@ -65,17 +65,31 @@ class APIClient {
   register(data: any) {
     return fetch(`http://localhost:5000/api/v1/users/create`, {
       method: 'POST',
-      body: data,
+      body: JSON.stringify(data),
+      mode: 'cors',
+      headers: { 'Content-Type': 'application/json' },
     }).then((res) => res.json())
   }
 
   changePass(data: any) {
-    return fetch(`${process.env.REACT_APP_BACKEND_NODE_URL!}${this.endpoints.changePass}`, {
+    return fetch(`http://localhost:5000/api/v1/users/changepass`, {
       method: 'POST',
-      body: data,
+      body: JSON.stringify(data),
+      mode: 'cors',
+      headers: { 'Content-Type': 'application/json' },
+    }).then((res) => res.json())
+  }
+
+  confirmPass(data: any) {
+    return fetch(`http://localhost:5000/api/v1/users/confirmpass`, {
+      method: 'POST',
+      body: JSON.stringify(data),
+      mode: 'cors',
+      headers: { 'Content-Type': 'application/json' },
     }).then((res) => res.json())
   }
 }
+
 function getServerUrl(mode: 'DEV' | 'PROD' | 'STAGING' | 'LOCAL') {
   switch (mode) {
     case 'LOCAL':
