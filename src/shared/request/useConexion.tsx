@@ -20,3 +20,11 @@ export function useGetLocalesByRegions(id: string) {
 export function useSavePharmacyMutate() {
   return useMutation('savePharmacy', apiClient.savePhamacy)
 }
+
+export function useFavoritePharmacyMutate() {
+  return useMutation('favorite', apiClient.favoritePhamacy)
+}
+
+export function useDeleteFavoritePharmacyMutate() {
+  return useMutation('deletefavorite', apiClient.deleteFavoritePhamacy)
+}

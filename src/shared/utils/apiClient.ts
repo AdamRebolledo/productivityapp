@@ -96,6 +96,22 @@ class APIClient {
       headers: { 'Content-Type': 'application/json' },
     }).then((res) => res.json())
   }
+  favoritePhamacy(data: any) {
+    return fetch(`http://localhost:5000/api/v1/pharmacy`, {
+      method: 'POST',
+      body: JSON.stringify(data),
+      mode: 'cors',
+      headers: { 'Content-Type': 'application/json' },
+    }).then((res) => res.json())
+  }
+  deleteFavoritePhamacy(data: any) {
+    return fetch(`http://localhost:5000/api/v1/pharmacy/delete`, {
+      method: 'POST',
+      body: JSON.stringify(data),
+      mode: 'cors',
+      headers: { 'Content-Type': 'application/json' },
+    }).then((res) => res.json())
+  }
 }
 
 function getServerUrl(mode: 'DEV' | 'PROD' | 'STAGING' | 'LOCAL') {

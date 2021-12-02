@@ -13,4 +13,6 @@ export interface ILocale {
   local_nombre: string
   local_telefono: string
   localidad_nombre: string
+  user_id?: number
+  locale_id?: string
 }
