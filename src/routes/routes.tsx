@@ -8,6 +8,7 @@ const Register = lazy(() => import('../modules/Auth/Register'))
 const ChangePass = lazy(() => import('../modules/Auth/ChangePass'))
 const FavoritePharmacy = lazy(() => import('../modules/FavoritePharmacy/FavoritePharmacy'))
 const UserListFavoritePharmacy = lazy(() => import('../modules/FavoritePharmacy/UserListFavoritePharmacy'))
+const ShoppingCart = lazy(() => import('../modules/ShoppingCart/ShoppingCart'))
 
 export const routes = {
   home: '/',
@@ -16,6 +17,7 @@ export const routes = {
   change_password: '/change-password',
   favorite_pharmacy: '/user-list',
   list_pharmacy_user: '/favorite-list',
+  shopping_cart: '/shopping-cart',
 }
 const Routes = () => (
   <Router>
@@ -28,6 +30,7 @@ const Routes = () => (
         <Route exact path={routes.change_password} component={ChangePass} />
         <Route exact path={routes.favorite_pharmacy} component={FavoritePharmacy} />
         <Route exact path={routes.list_pharmacy_user} component={UserListFavoritePharmacy} />
+        <Route exact path={routes.shopping_cart} component={ShoppingCart} />
       </Switch>
     </Suspense>
   </Router>
